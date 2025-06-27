@@ -1,0 +1,29 @@
+{
+  "name": "project-messaging-rabbitmq",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">📦 Projeto de Acompanhamento de Pedidos com RabbitMQ</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/setupRabbit.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EwertonHecsley/node-project-messaging-rabbitmq.git"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EwertonHecsley/node-project-messaging-rabbitmq/issues"
+  },
+  "homepage": "https://github.com/EwertonHecsley/node-project-messaging-rabbitmq#readme"
+}
