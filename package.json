@@ -4,15 +4,20 @@
   "description": "<h1 align=\"center\">📦 Projeto de Acompanhamento de Pedidos com RabbitMQ</h1>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/setupRabbit.ts"
+    "start": "ts-node src/app.ts",
+    "produtor": "ts-node src/produtor.ts",
+    "consumer-pedido": "ts-node src/consumerPedido.ts",
+    "consumer-pagamento": "ts-node src/consumerPagamento.ts",
+    "consumer-notificacao": "ts-node src/consumerNotificacao.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EwertonHecsley/node-project-messaging-rabbitmq.git"
   },
   "dependencies": {
-    "amqplib": "^0.10.3"
+    "amqplib": "^0.10.3",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0"
   },
   "devDependencies": {
     "@types/amqplib": "^0.10.7",
