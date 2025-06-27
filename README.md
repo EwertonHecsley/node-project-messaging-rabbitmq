@@ -133,7 +133,7 @@ Usuário: <code>admin</code> • Senha: <code>admin</code></p>
 
 <p>
   <strong>Ewerton Hecsley</strong><br/>
-  Consultor Comercial migrando para a área de Desenvolvimento Backend.<br/>
+  Engenheiro de Software | Desenvolvedor Backend.<br/>
   LinkedIn: <a href="https://www.linkedin.com/in/ewerton-hecsley-8a613992/" target="_blank">/ewerton-hecsley</a><br/>
   GitHub: <a href="https://github.com/EwertonHecsley" target="_blank">@EwertonHecsley</a>
 </p>
