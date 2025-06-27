@@ -9,7 +9,7 @@ export async function consumerPedido(channel: amqp.Channel) {
         (msg) => {
             if (!msg) return
             const dados = JSON.parse(msg.content.toString())
-            logger.info(`Pedido recebido (consumerPedido): ${dados.id || dados.pedidoId} - Atualizando status`)
+            logger.info(`Pedido recebido (consumerPedido): ${dados.id || dados.pedidoId} - Atualizando status...`)
             channel.ack(msg)
         },
         { noAck: false }

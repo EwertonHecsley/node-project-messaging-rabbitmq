@@ -10,9 +10,9 @@ export async function consumerPagamento(channel: amqp.Channel) {
         async (msg) => {
             if (!msg) return
             const dados = JSON.parse(msg.content.toString())
-            logger.info(`💳 Processando pagamento do pedido ${dados.id}`)
+            logger.info(`💳 Processando pagamento do pedido... ${dados.id}`)
 
-            await new Promise(r => setTimeout(r, 2000))
+            await new Promise(r => setTimeout(r, 3000))
 
             const aprovado = Math.random() > 0.4
             const routingKey = aprovado ? 'pedido.pago' : 'pedido.cancelado'
@@ -23,7 +23,7 @@ export async function consumerPagamento(channel: amqp.Channel) {
             }
 
             channel.publish(exchangePedido, routingKey, Buffer.from(JSON.stringify(evento)), { persistent: true })
-            logger.info(`Pagamento do pedido ${dados.id} ${aprovado ? 'APROVADO' : 'RECUSADO'}`)
+            logger.info(` ==== Pagamento do pedido ${dados.id} ${aprovado ? 'APROVADO' : 'RECUSADO'} ====`)
 
             channel.ack(msg)
         },
